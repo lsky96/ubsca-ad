@@ -123,8 +123,6 @@ class BSCAUnrolledIteration(nn.Module):
             self.skip_P = nn.Parameter(torch.tensor(0.5, dtype=torch.float))
             self.skip_Q = nn.Parameter(torch.tensor(0.5, dtype=torch.float))
             self.skip_A = nn.Parameter(torch.tensor(0.5, dtype=torch.float))
-        else:
-            raise ValueError
 
     def forward(self, Y, R, Omega, P, Q, A, A_update=True):
         lam1 = torch.exp(self.lam_log)
