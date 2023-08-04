@@ -182,7 +182,10 @@ class BSCAUnrolledIteration_ParamNW(nn.Module):
     lam_val = None
     mu_val = None
 
-    def __init__(self, two_lambda=False):
+    def __init__(self,
+                 two_lambda=False,
+                 skip_connections=False,  # this is a placeholder for compatibility
+                 ):
         super().__init__()
         self.two_lambda = two_lambda
         self.skip_connections = False
